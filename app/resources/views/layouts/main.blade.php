@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="/reset.css">
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/utilities.css">
-
+	<link rel="stylesheet" href="/header.css">
+	<link rel="stylesheet" href="/countdown.css">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="/swiper.min.css">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -20,9 +21,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+	<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+	
     <script defer src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
-    <script src="jquery-3.5.1.min.js"></script>
+	<script src="jquery-3.5.1.min.js"></script>
+	<script type="text/javascript">
+			  window.addEventListener("scroll", function(){
+				  var header = document.querySelector("header");
+				  header.classList.toggle("sticky", window.scrollY > 0);
+			  })
+			</script>
+	
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		@yield('link')
     <title>Darts</title>
@@ -42,7 +51,7 @@
 							</ul>
 					</div>
 
-					<div class="c-header__mobile">
+					<div class="c-header__mobile" style="position:fixed;">
 
 							<!-- Mobile Header -->
 							<div class="c-header__mobile--wrapper u__flex-container">
@@ -102,7 +111,7 @@
 
 
 					<div class="c-header__right u-flex_between">
-							<form action="" class="u-search u-flex_between">
+							<form action="" class="u-search u-flex_between" >
 									<img src="/img/search-white.png" alt="Search Icon">
 									<input class="black" type="text" placeholder="Хайх зүйлээ оруулна уу...">
 							</form>
